@@ -10,13 +10,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { OverviewComponent } from './overview/overview.component';
+import { ShopComponent } from './shop/shop.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    OverviewComponent
+    OverviewComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

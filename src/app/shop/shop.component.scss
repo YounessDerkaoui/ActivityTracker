@@ -1,0 +1,47 @@
+.shop {
+    background-image: url('/assets/img/shop-background.jpg') !important;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0, .1);
+    min-height: calc(100vh - 64px); /* Adjust this based on the height of your navbar */
+}
+
+.button-container button {
+    margin-right: 10px;
+}
+
+.first-in-row {
+    clear: left;
+}
+
+.card-container {
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px; /* Consider reducing this if you need more space for cards */
+}
+
+.example-card {
+    flex: 0 1 calc(33% - 80px); /* Adjust this calculation if cards do not align as expected */
+    margin: 8px 40px 60px; /* This sets margins around the card */
+    overflow: hidden; /* This ensures nothing overflows from the card */
+    position: relative; /* Needed for absolute positioning of children */
+}
+
+/* Ensure this class aligns with your HTML img tag. Remove if not used. */
+.card-image {
+    width: 90%; /* Full width */
+    height: 180px; /* Fixed height, adjust as necessary */
+    object-fit: cover; /* Cover the card area */
+}
+
+/* Update or remove if this is not the class used in the HTML img tag. */
+.mat-card-lg-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the card area */
+    position: absolute; /* Absolute position within the card */
+    top: 0;
+    left: 0;
+}
