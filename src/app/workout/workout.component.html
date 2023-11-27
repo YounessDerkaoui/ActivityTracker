@@ -1,0 +1,69 @@
+<div class="workout-tab">
+  <!-- Workout Cards Section -->
+  <h2 class="section-title">Workouts</h2>
+  <div class="workout-container" fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="start center">
+      <!-- Workout Cards -->
+      <mat-card *ngFor="let workout of workouts" class="workout-card">
+           <!-- Card Content -->
+        <mat-card-header>
+          <mat-card-title>{{ workout.name }}</mat-card-title>
+          <mat-card-subtitle>{{ workout.type }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="workout.image" alt="{{ workout.name }}">
+        <mat-card-content>
+          <mat-progress-bar mode="determinate" [value]="workout.progress"></mat-progress-bar>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-button color="primary">View Details</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+     <!-- User Progress Dashboard -->
+     <h2 class="section-title">Your Progress</h2>
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>Your Progress</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-progress-bar mode="determinate" [value]="userProgress.overall"></mat-progress-bar>
+        <div class="progress-details">
+          <span>{{ userProgress.completed }} Workouts Completed</span>
+          <span>{{ userProgress.remaining }} Workouts Remaining</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  
+    <!-- Daily Challenges -->
+    <h2 class="section-title">Daily Challenge</h2>
+    <mat-card class="challenge-card">
+      <mat-card-header>
+        <mat-card-title>Daily Challenge</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ dailyChallenge.description }}</p>
+        <button mat-button color="accent">Join Challenge</button>
+      </mat-card-content>
+    </mat-card>
+  
+    <!-- Upcoming Events -->
+<!-- Upcoming Events and Calendar -->
+<div class="upcoming-events-calendar-container">
+  <!-- Upcoming Events Section -->
+  <div class="upcoming-events-section">
+    <h2 class="section-title">Upcoming Events</h2>
+    <div class="events-list">
+      <!-- Event Items -->
+      <div *ngFor="let event of upcomingEvents" class="event">
+        <h3>{{ event.name }}</h3>
+        <p>{{ event.date | date }}</p>
+      </div>
+    </div>
+  </div>
+
+ <!-- Calendar Section -->
+  <div class="calendar-container">
+    <h2 class="section-title">Calendar</h2>
+    <mat-calendar [selected]="selectedDate" style="background-color: rgba(255, 255, 255, 0.8);border-radius: 8px;"></mat-calendar>
+  </div>
+</div>
+</div>

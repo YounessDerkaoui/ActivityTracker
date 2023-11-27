@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +12,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { OverviewComponent } from './overview/overview.component';
 import { ShopComponent } from './shop/shop.component';
+import { RewardsComponent } from './rewards/rewards.component';
+import { HealthcoachComponent } from './healthcoach/healthcoach.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { WorkoutComponent } from './workout/workout.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 @NgModule({
@@ -18,7 +27,11 @@ import { ShopComponent } from './shop/shop.component';
     AppComponent,
     NavbarComponent,
     OverviewComponent,
-    ShopComponent
+    ShopComponent,
+    RewardsComponent,
+    HealthcoachComponent,
+    WalletComponent,
+    WorkoutComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +40,12 @@ import { ShopComponent } from './shop/shop.component';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule,
+    MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
