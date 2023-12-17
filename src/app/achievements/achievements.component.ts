@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-rewards',
-  templateUrl: './rewards.component.html',
-  styleUrls: ['./rewards.component.scss']
+  selector: 'app-achievements',
+  templateUrl: './achievements.component.html',
+  styleUrls: ['./achievements.component.scss']
 })
-export class RewardsComponent {
+export class AchievementsComponent {
+
   cardData = [
     { 
       title: 'Marathon Champion', 
@@ -33,6 +34,20 @@ export class RewardsComponent {
       subtitle: 'Gym enthusiast', 
       description: 'Awarded for going to the gym for 3 months consistently.', 
       imageSrc: '/assets/img/Reward4.jpg',
+      icon: 'star'
+    },
+    { 
+      title: 'Hiking Champion', 
+      subtitle: 'Local Event', 
+      description: 'Awarded for joinning in the Hiking Event.', 
+      imageSrc: '/assets/img/Reward5.jpg',
+      icon: 'star'
+    },
+    { 
+      title: 'Swimming Champion', 
+      subtitle: 'Local Competition', 
+      description: 'Awarded for finishing in the Top 10 in the competition.', 
+      imageSrc: '/assets/img/Reward6.jpg',
       icon: 'star'
     },
     

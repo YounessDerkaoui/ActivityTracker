@@ -1,0 +1,35 @@
+.healthcoach {
+    background-image: url('/assets/img/backgroundhcoach.jpg') !important;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0, .1);
+}
+
+  .example-header-image {
+    background-size: cover;
+  }
+
+  .button-container button {
+    margin-right: 10px;
+  }
+  
+  .first-in-row {
+    clear: left;
+  }
+
+  .card-container {
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px; /* Adjust the margin as needed for spacing between cards */
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .example-card {
+    flex: 0 1 calc(25% - 16px); /* 25% to ensure 4 cards per row, minus margin */
+    margin: 8px; /* Adjust the margin as needed for spacing between cards */
+    width: 23%;
+  }

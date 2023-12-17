@@ -12,13 +12,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { OverviewComponent } from './overview/overview.component';
 import { ShopComponent } from './shop/shop.component';
-import { RewardsComponent } from './rewards/rewards.component';
 import { HealthcoachComponent } from './healthcoach/healthcoach.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { WorkoutComponent } from './workout/workout.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AchievementsComponent } from './achievements/achievements.component';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -28,10 +29,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     NavbarComponent,
     OverviewComponent,
     ShopComponent,
-    RewardsComponent,
     HealthcoachComponent,
     WalletComponent,
-    WorkoutComponent
+    WorkoutComponent,
+    AchievementsComponent,
+    WalletComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDatepickerModule,
     MatNativeDateModule,
     FlexLayoutModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

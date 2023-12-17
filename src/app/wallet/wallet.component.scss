@@ -1,0 +1,102 @@
+/* Base styles to set up the layout and background */
+html, body {
+    height: 100%; /* Ensure the html and body fill the viewport */
+    margin: 0; /* Reset default margin */
+  }
+  
+  /* Main wallet container styling */
+  .wallet {
+    padding: 20px;
+    border-radius: 8px;
+    background: url('/assets/img/walletbg.png') no-repeat center center;
+    background-size: cover; /* Ensure the background covers the entire div */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns items from the top */
+    min-height: 100vh; /* Wallet container takes up full viewport height */
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+  }
+  
+  /* Overlay to enhance text readability against the background */
+  .wallet:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+    border-radius: 8px; /* Rounded corners to match the wallet container */
+    z-index: 0; /* Situate the overlay behind the content */
+  }
+  
+  /* Ensure all direct children of .wallet are positioned above the overlay */
+  .wallet > * {
+    position: relative;
+    z-index: 1; /* Ensures content is above the pseudo-element */
+  }
+  
+  /* Balance Sheet heading adjustments */
+  .wallet h2 {
+    margin-top: 0; /* Removes default top margin */
+    font-size: 1.5em; /* Adjusts the size of the heading */
+    color: #333; /* Sets the color to a dark grey for readability */
+  }
+  
+  /* Table and rows styling for shadows and interactivity */
+  mat-row, mat-header-row {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+  mat-row:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.18), 0 5px 5px rgba(0,0,0,0.24);
+  }
+  
+  /* Text color for cells for better contrast and readability */
+  mat-cell, mat-header-cell {
+    color: rgba(0, 0, 0, 0.87);
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Total balance styling */
+/* Total balance styling */
+.total-balance {
+    margin-top: 20px; /* Adjust if more or less space is needed */
+    margin-bottom: 20px; /* Ensure there's space at the bottom */
+    font-size: 1.1em; /* Slightly larger font size for emphasis */
+    font-weight: bold; /* Makes the total balance text bold */
+    color: #333; /* Ensures the text is readable against light backgrounds */
+    position: relative; /* Ensure it's above the pseudo-element */
+    z-index: 2; /* Higher index to ensure visibility */
+  }
+  
+  /* Points color coding */
+  .points-positive {
+    color: #4caf50; /* Green color for positive points */
+    font-weight: bold;
+  }
+  
+  .points-negative {
+    color: #f44336; /* Red color for negative points */
+    font-weight: bold;
+  }
+  
+  /* Responsive design adjustments */
+  @media screen and (max-width: 600px) {
+    .wallet {
+      padding: 10px; /* Smaller padding on smaller screens */
+    }
+  
+    .wallet h2 {
+      font-size: 1.2em; /* Slightly smaller font for smaller screens */
+    }
+  
+    /* Adjust cell padding and font size for table on smaller screens */
+    mat-cell, mat-header-cell {
+      padding: 4px;
+      font-size: 14px;
+    }
+  }
+  
+  

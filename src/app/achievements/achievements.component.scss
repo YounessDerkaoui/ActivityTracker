@@ -1,5 +1,5 @@
-.rewards {
-    background-image: url('/assets/img/bgrewards.jpg');
+.achievements {
+    background-image: url('/assets/img/bgachievements.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -91,5 +91,9 @@ button.mat-button {
 
 button.mat-button:hover {
     background-color: #005b4f;
+}
+.custom-button-color {
+    background-color: goldenrod;
+    color: white;
 }
 

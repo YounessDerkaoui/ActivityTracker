@@ -1,1 +1,22 @@
-<p>healthcoach works!</p>
+<div class="healthcoach">
+  <div class="card-container" fxLayout="row wrap" fxLayout.xs="column">
+    <ng-container *ngFor="let card of cardData">
+      <!-- Entire card is clickable -->
+      <mat-card class="example-card" (click)="goToVideo(card.videoUrl)">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <!-- This is where the icon will be displayed -->
+            <mat-icon aria-hidden="false" [attr.aria-label]="card.title">{{ card.icon }}</mat-icon>
+          </div>
+          <mat-card-title>{{ card.title }}</mat-card-title>
+          <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="card.imageSrc" [alt]="card.title">
+        <mat-card-content>
+          <p>{{ card.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>
+
